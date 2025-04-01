@@ -115,7 +115,7 @@ class _ImageScreenState extends State<ImageScreen> {
       final imageId = params['imageId'];
       if (imageId != null) {
         final response = await http.get(
-            Uri.parse('https://nustsys.info/get_image.php?image_id=$imageId'));
+            Uri.parse('Your-Flutter-Web-URL?image_id=$imageId'));
         if (response.statusCode == 200) {
           Uint8List bytes = response.bodyBytes;
           img.Image originalImage = img.decodeImage(bytes)!;
@@ -158,7 +158,7 @@ class _ImageScreenState extends State<ImageScreen> {
         Uri.encodeComponent(timestamp); // Encode timestamp for URL
     print("base46 string :::::::: $base64String");
     final url =
-        "https://lcgat.nust.edu.iq/egisapi/login/applyImageUpload?timeStamp=$timestamp";
+        "Your-API-to update the photo?timeStamp=$timestamp";
 
     var response = await http.post(
       Uri.parse(url),
@@ -192,7 +192,7 @@ class _ImageScreenState extends State<ImageScreen> {
       String firstPhone,
       String secondPhone) async {
     var provider = Provider.of<MyProvider>(context, listen: false);
-    final url = "https://nustsys.info/std_info.php";
+    final url = "Your-API-to send the data //you can use one api for both the data and the image";
 
     var response = await http.post(Uri.parse(url), body: {
       'register_number': userModel.ldOtherCode.toString(),
