@@ -57,7 +57,7 @@ function App() {
         formData.append('image_id', imageId); // Add unique imageId to FormData
 
         // Send the image as a file and the unique ID to the API
-        const apiResponse = await axios.post('https://nustsys.info/image.php', formData, {
+        const apiResponse = await axios.post('Your-Custom-API', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -67,7 +67,7 @@ function App() {
         if (apiResponse.status === 200) {
           console.log("Image uploaded successfully!");
           // After successful upload, redirect the user with imageId as a query parameter
-          const flutterWebUrl = `https://s-info.nustsys.info/#/capture?imageId=${imageId}`;
+          const flutterWebUrl = `Your-Flutter-Web-URL + with imageid`;
           console.log("Redirecting to:", flutterWebUrl);
 
           // Wait 1 second before redirecting to make sure upload is finished
@@ -89,7 +89,7 @@ function App() {
       formData.append("image", imageBlob, "photo.png");
 
       const response = await axios.post(
-        "https://web-production-e1d86.up.railway.app/",
+        "Your-Python-API-to remove background",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
