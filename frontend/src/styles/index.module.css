@@ -1,0 +1,113 @@
+.app {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #404354;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  direction: rtl;  /* Ensures right-to-left text alignment */
+  padding: 20px;
+}
+
+.container {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 40rem;  /* Ensures a max width but adapts to smaller screen sizes */
+  position: relative;
+  overflow: hidden;
+  display: block;  /* Use block or flex */
+  margin-left: auto;
+  margin-right: auto;  /* Centers the container horizontally */
+  align-items: center;  /* Only works if display is flex */
+  align-self: center;  /* Centers the container on flexbox if used */
+  align-content: center;  /* Works with flexbox to align content */
+}
+
+
+.container img {
+  margin-top: 1rem;
+  max-width: 100%;
+  align-items: center;
+}
+
+.photoResultContainer {
+  background-color: white;
+  padding: 20px;
+  display: inline-block;
+  border: 1px solid #0c0b0b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;  /* Prevents container from growing too large on big screens */
+  margin: 0 auto;  /* Center the container */
+}
+
+.photoResultContainer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;  /* Reduces padding on smaller screens */
+  }
+
+  .container {
+    width: 90%;  /* Makes the container width smaller on mobile */
+  }
+
+  h1 {
+    font-size: 1.5rem;  /* Smaller header on mobile */
+  }
+
+  .photoResultContainer {
+    max-width: 100%;  /* Make the result container fill the screen width */
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 900px) {
+  .app {
+    padding: 15px;
+  }
+
+  .container {
+    width: 80%;  /* Adjust width on tablet screens */
+  }
+
+  h1 {
+    font-size: 1.8rem;  /* Larger header for tablet */
+  }
+
+  .photoResultContainer {
+    max-width: 100%;  /* Make the result container fill the screen width */
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 901px) {
+  .app {
+    padding: 40px;
+  }
+
+  .container {
+    width: 50%;  /* For larger screens, make container wider */
+  }
+
+  h1 {
+    font-size: 2.5rem;  /* Larger header for desktop */
+  }
+
+  .photoResultContainer {
+    max-width: 400px;  /* Limit the width of the photo result container */
+  }
+}
+* {
+  font-family: 'Cairo', sans-serif;
+}
+
+

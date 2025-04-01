@@ -1,0 +1,50 @@
+{
+  "name": "reactjs-components-integration",
+  "private": true,
+  "version": "1.2.13",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --max-warnings 0",
+    "lint:fix": "yarn lint --fix",
+    "preview": "vite preview",
+    "delete-assets": "rm -rf ./public/dot-assets",
+    "copy-assets": "find ./node_modules/@innovatrics -type d -name 'dot-assets' -exec cp -R {} ./public \\;",
+    "copy-assets-win": "for /d %i in (node_modules\\@innovatrics\\*) do xcopy /E /I /Y %i\\dot-assets public\\dot-assets"
+  },
+  "dependencies": {
+    "@innovatrics/dot-auto-capture-ui": "7.1.0",
+    "@innovatrics/dot-document-auto-capture": "7.1.0",
+    "@innovatrics/dot-face-auto-capture": "7.1.0",
+    "@innovatrics/dot-magnifeye-liveness": "7.1.0",
+    "@innovatrics/dot-smile-liveness": "7.1.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "axios": "^1.8.4",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "uuid": "^11.1.0",
+    "vite": "^5.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-helmet": "^6.1.11",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  }
+}
