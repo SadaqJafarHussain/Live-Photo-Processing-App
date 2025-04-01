@@ -163,7 +163,7 @@ bool loading =false;
     String timestamp = getTimestamp(); // Get the timestamp
     print(timestamp); // Print timestamp for debugging
 try{
-  final url = "https://lcgat.nust.edu.iq/egisapi/login/Student?timeStamp=$timestamp";
+  final url = "Your-Login-API";
   var response = await http.post(
     Uri.parse(url),
     headers: {
@@ -171,8 +171,8 @@ try{
       "Content-Type": "application/json",
     },
     body: jsonEncode({
-      "userName": phoneController.text.trim().substring(1),
-      "examNo": examNumber.text.trim(),
+      "first-parameter": phoneController.text.trim().substring(1),
+      "second-parameter": examNumber.text.trim(),
     }),
   );
   var decodedData=jsonDecode(response.body);
@@ -275,7 +275,7 @@ try{
   void handleSubmit(BuildContext context) async {
     Navigator.pop(context); // Close the confirmation dialog
     showLoadingOverlay(context); // Show full-screen loading overlay
-       const String webAppUrl = "https://nust-stud.nustsys.info";
+       const String webAppUrl = "Your-React-Web-URL";
        html.window.location.assign(webAppUrl);
       // context.go("/capture");
   }
